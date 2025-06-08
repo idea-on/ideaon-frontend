@@ -1,10 +1,12 @@
 import React from 'react'
 import HeroSection from './HeroSection'
+import WhyChoose from './WhyChoose'
 
 export default function HomeComponent() {
   return (
-    <div className='mt-38'>
-      <HeroSection/>
-    </div>
+    <main className=''>
+      <HeroSection />
+      <WhyChoose />
+    </main>
   )
 }

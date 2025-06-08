@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=boska@400&display=swap'); 
+@import url('https://api.fontshare.com/v2/css?f[]=boska@400&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -7,6 +7,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #ffffff;
+  --lightDark: #101014;
   --secondary: #4EA62F;
 
   /* Font family */
@@ -19,11 +20,10 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-
+  --color-lightDark: var(--lightDark);
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
-
-
+  --font-poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,7 +31,8 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --primary: #ededed;
-    --secondary: #4EA62F; /* You can customize this if needed */
+    --secondary: #4EA62F;
+    /* You can customize this if needed */
   }
 }
 
@@ -41,6 +42,11 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
-}
+} */
