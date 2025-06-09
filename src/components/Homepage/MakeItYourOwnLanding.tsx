@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Square, Target, Trophy } from 'lucide-react';
+import { ArrowRight, Square, Target } from 'lucide-react';
 
 const MakeItYourOwnLanding = () => {
   const [activeStep, setActiveStep] = useState(1);

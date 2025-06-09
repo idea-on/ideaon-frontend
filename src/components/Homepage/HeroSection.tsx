@@ -9,7 +9,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-
 const HeroSection = () => {
   return (
     <header className="h-screen bg-background relative overflow-hidden flex flex-col">
@@ -35,96 +34,116 @@ const HeroSection = () => {
       <div className="absolute bottom-80 left-1/2 w-4 h-4 bg-gray-500 rotate-45 opacity-40"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-6">
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 py-12">
         {/* Vision Badge */}
         <div className="mb-8">
           <div className="bg-secondary bg-opacity-40 backdrop-blur-sm rounded-full px-6 py-2 flex items-center border border-gray-600">
-
             <span className="text-white text-sm font-medium">Secure Startup Ecosystem Platform</span>
           </div>
         </div>
 
-        {/* Main Headline with Embedded Videos */}
-        <div className="text-center mb-12 max-w-6xl">
-          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            <div className="flex flex-wrap items-center justify-center gap-6 mb-4">
-              <span>The trusted marketplace</span>
-              <VideoElement
-                className="w-24 h-12 md:w-28 md:h-14 lg:w-32 lg:h-16"
-                // bgColor="bg-orange-600"
-                videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-              >
+        {/* Main Headline with Embedded Videos - Mobile Optimized */}
+        <div className="text-center mb-8 sm:mb-12 max-w-6xl">
+          <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            {/* Mobile: Completely different layout */}
+            <div className="block sm:hidden">
+              {/* Mobile - Simple clean headline */}
+            <div className="space-y-6 max-w-[90%] mx-auto">
+                <h1 className="text-2xl font-bold leading-tight px-2">
+                  The trusted marketplace where ideas meet capital for startup success.
+                </h1>
 
-              </VideoElement>
+                {/* Mobile video showcase - horizontal scroll */}
+                <div className="mt-6">
+                  <div className="flex gap-3 pb-4 px-2 mx-auto">
+                    <VideoElement
+                      className="w-24 h-20 flex-shrink-0 rounded-lg shadow-lg"
+                      videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                    />
+                    <VideoElement
+                      className="w-24 h-20 flex-shrink-0 rounded-lg shadow-lg"
+                      videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                    />
+                    <VideoElement
+                      className="w-24 h-20 flex-shrink-0 rounded-lg shadow-lg"
+                      videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                    />
+                  </div>
+                  <div className="text-sm text-gray-400 mt-2 px-2">← Swipe to explore</div>
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 mb-4">
-              <span>where ideas</span>
-              <VideoElement
-                className="w-24 h-12 md:w-28 md:h-14 lg:w-32 lg:h-16"
+            {/* Desktop Layout - Original inline style */}
+            <div className="hidden sm:block">
+              <div className="flex flex-wrap items-center justify-center gap-6 mb-4">
+                <span>The trusted marketplace</span>
+                <VideoElement
+                  className="w-24 h-12 md:w-28 md:h-14 lg:w-32 lg:h-16"
+                  videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                />
+              </div>
 
-                videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-              >
+              <div className="flex flex-wrap items-center justify-center gap-6 mb-4">
+                <span>where ideas</span>
+                <VideoElement
+                  className="w-24 h-12 md:w-28 md:h-14 lg:w-32 lg:h-16"
+                  videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                />
+                <span>meet capital</span>
+              </div>
 
-              </VideoElement>
-              <span>meet capital</span>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              <span>for startup success.</span>
-              <VideoElement
-                className="w-24 h-12 md:w-28 md:h-14 lg:w-32 lg:h-16"
-
-                videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              >
-
-              </VideoElement>
+              <div className="flex flex-wrap items-center justify-center gap-6">
+                <span>for startup success.</span>
+                <VideoElement
+                  className="w-24 h-12 md:w-28 md:h-14 lg:w-32 lg:h-16"
+                  videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                />
+              </div>
             </div>
           </div>
 
           {/* Description */}
-          <div className="text-lg md:text-xl text-gray-300 mt-8 max-w-4xl mx-auto">
+          <div className="text-base sm:text-lg md:text-xl text-gray-300 mt-6 sm:mt-8 max-w-4xl mx-auto px-2">
             Connect with investors, auditors, and consultants in a secure, NDA-protected environment designed for startup success.
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-          <button className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-secondary transition-all duration-300 flex items-center shadow-lg">
-            <Rocket className="w-5 h-5 mr-2" />
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 px-4 w-full max-w-md sm:max-w-none">
+          <button className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-secondary transition-all duration-300 flex items-center shadow-lg w-full sm:w-auto justify-center text-sm sm:text-base">
+            <Rocket className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Start Your Journey
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
           </button>
-          <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 flex items-center">
-            <PlayCircle className="w-5 h-5 mr-2" />
+          <button className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 flex items-center w-full sm:w-auto justify-center text-sm sm:text-base">
+            <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Watch Demo
           </button>
         </div>
 
         {/* Trust Indicators */}
-        <div className="flex flex-wrap justify-center gap-8 text-center">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-center px-4">
           <div className="flex flex-col items-center">
-            <div className="text-white font-semibold flex items-center gap-2">
-              <Lock className="w-5 h-5" />
+            <div className="text-white font-semibold flex items-center gap-2 text-sm sm:text-base">
+              <Lock className="w-4 h-4 sm:w-5 sm:h-5" />
               100% NDA Protected
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="text-white font-semibold flex items-center gap-2">
-              <Banknote className="w-5 h-5" />
+            <div className="text-white font-semibold flex items-center gap-2 text-sm sm:text-base">
+              <Banknote className="w-4 h-4 sm:w-5 sm:h-5" />
               Escrow Secured
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="text-white font-semibold flex items-center gap-2">
-              <CheckCircle className="w-5 h-5" />
+            <div className="text-white font-semibold flex items-center gap-2 text-sm sm:text-base">
+              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
               Verified Auditors
             </div>
           </div>
         </div>
       </div>
-
-
-
     </header>
   );
 };
