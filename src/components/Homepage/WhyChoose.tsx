@@ -172,7 +172,7 @@ const ConnectingLines = ({ position }: { position: string }) => {
     return <div className="absolute inset-0">{getLineStyles()}</div>;
 };
 
-const FeatureCard = ({ feature, isCenter = false, hasGradient = false }: FeatureCardProps) => {
+const FeatureCard = ({ feature }: FeatureCardProps) => {
     const Icon = feature.icon;
 
     return (
