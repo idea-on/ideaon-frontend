@@ -1,30 +1,29 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
+'use client';
 
-
-
-
-export const metadata: Metadata = {
-  title: "Ideaon",
-  description: "Secure and private idea management platform",
-};
+import './globals.css';
+import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const pathname = usePathname();
+  
+  const isAuthPage = [
+    '/auth/sign-in', 
+    '/auth/sign-up', 
+    '/auth/forget-password'
+  ].includes(pathname);
+
   return (
     <html lang="en">
-
-      <body
-      >
-        <Navbar/>
+      <body>
+        {!isAuthPage && <Navbar />}
         {children}
-    
-        <Footer/>
+        {!isAuthPage && <Footer />}
       </body>
     </html>
   );

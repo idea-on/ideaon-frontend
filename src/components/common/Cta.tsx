@@ -9,7 +9,7 @@ const ChainexCTA = () => {
   return (
     <div className="relative  overflow-hidden flex items-center justify-center ">
   
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto sm:py-8">
         {/* Glowing Content Box Border */}
       
         

@@ -246,14 +246,14 @@ const Navbar: React.FC = () => {
                 {/* Auth Buttons with Enhanced Hover Effects */}
                 <div className="flex items-center space-x-3 ml-4 border-l border-gray-300 pl-4">
                   <Link 
-                    href="/login" 
+                    href="/auth/sign-in" 
                     className="group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-black transition-all duration-300 overflow-hidden rounded-full"
                   >
                     <span className="relative z-10">Login</span>
                     <div className="absolute inset-0 bg-gray-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center rounded-full"></div>
                   </Link>
                   <Link 
-                    href="/signup" 
+                    href="/auth/sign-up" 
                     className="group relative px-4 py-2 text-sm font-medium bg-background text-white rounded-full transition-all duration-300 overflow-hidden hover:shadow-lg"
                   >
                     <span className="relative z-10">Sign Up</span>
@@ -423,7 +423,7 @@ const Navbar: React.FC = () => {
               {/* Mobile Auth Buttons */}
               <div className="pt-4 border-t border-gray-200 space-y-3">
                 <Link 
-                  href="/login" 
+                  href="/auth/sign-in" 
                   className="group relative block w-full text-center px-4 py-3 text-base font-medium text-gray-700 hover:text-black transition-all duration-300 overflow-hidden rounded-lg border border-gray-200"
                   onClick={closeMenu}
                 >
@@ -431,7 +431,7 @@ const Navbar: React.FC = () => {
                   <div className="absolute inset-0 bg-gray-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center rounded-lg"></div>
                 </Link>
                 <Link 
-                  href="/signup" 
+                  href="/auth/sign-up" 
                   className="group relative block w-full text-center px-4 py-3 text-base font-medium bg-background text-white rounded-lg transition-all duration-300 overflow-hidden hover:shadow-lg"
                   onClick={closeMenu}
                 >
