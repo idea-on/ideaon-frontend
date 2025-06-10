@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="absolute bottom-80 left-1/2 w-4 h-4 bg-gray-500 rotate-45 opacity-40"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 py-12 ">
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 py-6 ">
         {/* Vision Badge */}
         <div className="mb-8">
           <div className="bg-secondary bg-opacity-40 backdrop-blur-sm rounded-full px-6 py-2 flex items-center border border-gray-600">

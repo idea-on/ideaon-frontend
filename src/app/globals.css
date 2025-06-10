@@ -50,3 +50,21 @@ h5,
 h6 {
   font-family: var(--font-heading);
 } */
+
+
+
+/* cta section animation start */
+    @keyframes glow-0 {
+          0%, 100% { opacity: 0.3; transform: scaleX(0.5); }
+          50% { opacity: 1; transform: scaleX(1); }
+        }
+        @keyframes glow-1 {
+          0%, 100% { opacity: 0.5; transform: scaleX(0.7); }
+          50% { opacity: 1; transform: scaleX(1); }
+        }
+        @keyframes glow-2 {
+          0%, 100% { opacity: 0.4; transform: scaleX(0.6); }
+          50% { opacity: 1; transform: scaleX(1); }
+        }
+
+/* cta section animation end */
