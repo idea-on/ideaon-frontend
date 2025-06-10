@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, TrendingUp, Shield, ArrowRight,} from 'lucide-react';
+import {  ArrowRight,} from 'lucide-react';
 import { images } from '../../../public/assets/assets';
 
 const ChainexCTA = () => {
@@ -7,7 +7,7 @@ const ChainexCTA = () => {
 
 
   return (
-    <div className="relative min-h-screen overflow-hidden flex items-center justify-center ">
+    <div className="relative  overflow-hidden flex items-center justify-center ">
   
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         {/* Glowing Content Box Border */}
@@ -101,27 +101,8 @@ const ChainexCTA = () => {
         </div>
       </div>
 
-      {/* Mobile Feature Indicators */}
-      <div className="absolute inset-0 lg:hidden xl:hidden z-20 pointer-events-none">
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-          <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-2 border border-[#4EA62F]/30">
-            <Shield className="w-6 h-6 text-[#4EA62F]" />
-          </div>
-          <div className="absolute inset-0 bg-[#4EA62F] rounded-lg opacity-15 blur-sm animate-pulse" />
-        </div>
-        <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-          <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-2 border border-[#4EA62F]/30">
-            <TrendingUp className="w-6 h-6 text-[#4EA62F]" />
-          </div>
-          <div className="absolute inset-0 bg-[#4EA62F] rounded-lg opacity-15 blur-sm animate-pulse delay-500" />
-        </div>
-        <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2">
-          <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-2 border border-[#4EA62F]/30">
-            <Star className="w-6 h-6 text-[#4EA62F]" />
-          </div>
-          <div className="absolute inset-0 bg-[#4EA62F] rounded-lg opacity-15 blur-sm animate-pulse delay-1000" />
-        </div>
-      </div>
+   
+      
 
       {/* Additional enhanced floating orb glows */}
       <div className="absolute top-10 left-1/2 w-24 h-24 bg-[#4EA62F] rounded-full opacity-8 blur-3xl animate-pulse delay-300" />

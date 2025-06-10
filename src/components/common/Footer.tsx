@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         {/* Footer */}
         <footer className="bg-black py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
               {/* Individuals */}
               <div>
                 <h3 className="text-white font-semibold mb-4">Individuals</h3>
@@ -84,15 +84,15 @@ const Footer: React.FC = () => {
               <div>
                 <h3 className="text-white font-semibold mb-4">Follow us at</h3>
                 <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-2 justify-center md:justify-start">
                     <span>📱</span>
                     <a href="#" className="hover:text-white transition-colors">Twitter</a>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-2 justify-center md:justify-start">
                     <span>📷</span>
                     <a href="#" className="hover:text-white transition-colors">Instagram</a>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-2 justify-center md:justify-start">
                     <span>💼</span>
                     <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
                   </li>
