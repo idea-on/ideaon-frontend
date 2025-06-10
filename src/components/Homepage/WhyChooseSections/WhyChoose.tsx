@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import { Trophy, Zap, Building, Shield, Users } from 'lucide-react';
-import VectorLine from './WhyChooseSections/VectorLine';
-import CenterLogo from './WhyChooseSections/CenterLogo';
+import VectorLine from './VectorLine';
+import CenterLogo from './CenterLogo';
 
 interface Feature {
     id: string;

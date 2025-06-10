@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from './HeroSection'
-import WhyChoose from './WhyChoose'
+import WhyChoose from './WhyChooseSections/WhyChoose'
 import MakeItYourOwnLanding from './MakeItYourOwnLanding'
 
 export default function HomeComponent() {

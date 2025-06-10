@@ -11,7 +11,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <header className="h-screen bg-background relative overflow-hidden flex flex-col">
+    <header className="min-h-screen bg-background relative overflow-hidden flex flex-col">
       {/* Grid pattern background */}
       <div
         className="absolute inset-0 opacity-10"
@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="absolute bottom-80 left-1/2 w-4 h-4 bg-gray-500 rotate-45 opacity-40"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 py-12">
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 py-12 ">
         {/* Vision Badge */}
         <div className="mb-8">
           <div className="bg-secondary bg-opacity-40 backdrop-blur-sm rounded-full px-6 py-2 flex items-center border border-gray-600">
@@ -53,9 +53,9 @@ const HeroSection = () => {
                   The trusted marketplace where ideas meet capital for startup success.
                 </h1>
 
-                {/* Mobile video showcase - horizontal scroll */}
+                {/* Mobile video showcase - horizontally centered */}
                 <div className="mt-6">
-                  <div className="flex gap-3 pb-4 px-2 mx-auto">
+                  <div className="flex gap-3 pb-4 px-2 mx-auto justify-center">
                     <VideoElement
                       className="w-24 h-20 flex-shrink-0 rounded-lg shadow-lg"
                       videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
@@ -69,7 +69,7 @@ const HeroSection = () => {
                       videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
                     />
                   </div>
-                  <div className="text-sm text-gray-400 mt-2 px-2">← Swipe to explore</div>
+                  <div className="text-xs text-gray-400 mt-2 px-2 text-center">← Swipe to explore</div>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 px-4 w-full max-w-md sm:max-w-none">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4 w-full max-w-md sm:max-w-none">
           <button className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-secondary transition-all duration-300 flex items-center shadow-lg w-full sm:w-auto justify-center text-sm sm:text-base">
             <Rocket className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Start Your Journey
@@ -122,8 +122,8 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-center px-4">
+        {/* Trust Indicators - Fixed positioning and spacing */}
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-8 text-center px-4 ">
           <div className="flex flex-col items-center">
             <div className="text-white font-semibold flex items-center gap-2 text-sm sm:text-base">
               <Lock className="w-4 h-4 sm:w-5 sm:h-5" />
