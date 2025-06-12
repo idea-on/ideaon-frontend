@@ -1,4 +1,6 @@
+import {  Network } from 'lucide-react'
 import React from 'react'
+
 
 export default function CenterLogo() {
   return (
@@ -29,8 +31,8 @@ export default function CenterLogo() {
             {/* Very subtle brand color accent */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#4EA62F]/8 to-transparent rounded-full" />
 
-            <div className="text-5xl font-bold text-white tracking-wider relative z-10 drop-shadow-lg">
-                H
+            <div className=" font-bold text-white tracking-wider relative z-10 drop-shadow-lg">
+                <Network size={48} />
             </div>
         </div>
     </div>

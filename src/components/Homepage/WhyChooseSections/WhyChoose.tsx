@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Trophy, Zap, Building, Shield, Users } from 'lucide-react';
+import { Rocket, Zap, Brain, ShieldCheck, TrendingUp, CheckCircle } from 'lucide-react';
 import VectorLine from './VectorLine';
 import CenterLogo from './CenterLogo';
 
@@ -19,36 +19,55 @@ interface FeatureCardProps {
 }
 
 const features: Feature[] = [
-    {
-        id: 'speed',
-        icon: Trophy,
-        title: 'Unmatched Speed',
-        description: 'Chainex processes transactions instantly, ensuring seamless and uninterrupted blockchain experiences with zero delays',
-        position: 'top'
-    },
-    {
-        id: 'scalable',
-        icon: Building,
-        title: 'Scalable for Every Need',
-        description: 'From startups to enterprises, Chainex adapts to growing demands, providing a flexible and future-ready blockchain solution',
-        position: 'left'
-    },
-    {
-        id: 'security',
-        icon: Shield,
-        title: 'Advanced Security',
-        description: 'With top-tier encryption and decentralized architecture, Chainex guarantees the highest level of security and trust',
-        position: 'right'
-    },
-    {
-        id: 'efficient',
-        icon: Users,
-        title: 'User-Friendly and Efficient',
-        description: 'Chainex combines cutting-edge technology with intuitive interface and smooth integration for hassle-free blockchain transactions',
-        position: 'bottom'
-    }
+  {
+    id: 'why-ideaon',
+    icon: Rocket,
+    title: 'Why Choose IdeaON',
+    description:
+      'The all-in-one startup collaboration platform for innovators, investors & experts — securely connect, collaborate, and grow.',
+    position: 'top',
+  },
+  {
+    id: 'collaboration',
+    icon: Zap,
+    title: 'Smart & Instant Collaboration',
+    description:
+      'Instantly match with investors, patent agents, and consultants based on startup stage — all NDA-protected.',
+    position: 'left',
+  },
+  {
+    id: 'gig-marketplace',
+    icon: Brain,
+    title: 'Hire Verified Experts Anytime',
+    description:
+      'Access a gig marketplace for legal, pitch deck, and branding services — with escrow-secured payments and verified experts.',
+    position: 'right',
+  },
+  {
+    id: 'nda-protection',
+    icon: ShieldCheck,
+    title: 'NDA-Enforced Startup Platform',
+    description:
+      'Confidential idea sharing with automatic NDAs across all chats, pitches, and uploads — full IP protection by design.',
+    position: 'bottom',
+  },
+  {
+    id: 'scalability',
+    icon: TrendingUp,
+    title: 'Scalable for Startups & Enterprises',
+    description:
+      'From seed funding to corporate innovation — IdeaON grows with your startup or investment goals.',
+    position: 'top',
+  },
+  {
+    id: 'get-started',
+    icon: CheckCircle,
+    title: 'Start Building Smarter on IdeaON',
+    description:
+      'Join the future of startup collaboration, funding & growth — all in one powerful, private platform.',
+    position: 'left',
+  },
 ];
-
 
 const FeatureCard = ({ feature }: FeatureCardProps) => {
     const Icon = feature.icon;
@@ -196,12 +215,7 @@ const WhyChoose = () => {
                     ))}
                 </div>
 
-                {/* Enhanced CTA Button with brand colors */}
-                <div className="text-center mt-10">
-                    <button className="px-10 py-4 bg-gradient-to-r from-[#4EA62F] via-[#4EA62F] to-[#3d8b26] hover:from-[#3d8b26] hover:via-[#4EA62F] hover:to-[#4EA62F] text-white font-semibold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#4EA62F]/30 hover:shadow-[#4EA62F]/50 border border-[#4EA62F]/20">
-                        Get Started
-                    </button>
-                </div>
+             
 
                 {/* Add custom styles for radial gradient */}
                 <style jsx>{`

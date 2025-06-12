@@ -43,7 +43,7 @@ export default function ForgotPasswordPage() {
               Back to sign in
             </Link>
             <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">Forgot Password?</h1>
-            <p className="text-gray-400 text-sm">Don't worry! Enter your email and we'll send you a reset link</p>
+            <p className="text-gray-400 text-sm">{"Don't worry! Enter your email and we'll send you a reset link"}</p>
           </div>
 
           <div className="space-y-6">
@@ -81,7 +81,7 @@ export default function ForgotPasswordPage() {
               </p>
               
               <p className="text-gray-400 text-sm">
-                Don't have an account?{' '}
+                {"Don't have an account?{' '}"}
                 <Link
                   href="/auth/sign-up"
                   className="text-green-400 hover:text-green-300 font-medium"
