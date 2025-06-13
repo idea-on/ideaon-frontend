@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (isMenuOpen && !target.closest('nav')) {
+      if (isMenuOpen && !target.closest('nav') && !target.closest('.mobile-menu-container')) {
         setIsMenuOpen(false);
       }
     };
@@ -55,7 +55,9 @@ const Navbar: React.FC = () => {
     setIsExploreOpen(false); // Close explore dropdown when toggling menu
   };
 
-  const toggleExplore = () => {
+  const toggleExplore = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setIsExploreOpen(!isExploreOpen);
   };
 
@@ -275,6 +277,7 @@ const Navbar: React.FC = () => {
                 className={`flex items-center space-x-2 transition-all duration-300 ${
                   isScrolled ? 'text-black' : 'text-white'
                 }`}
+                onClick={closeMenu}
               >
                 <img 
                   src={isScrolled ? images.png.logoWhiteTheme.src : images.png.logoDarkTheme.src} 
@@ -304,9 +307,17 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Navigation Menu - Fixed positioning to avoid scroll issues */}
+      {/* Dark overlay for mobile menu - positioned behind menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 right-0 z-40 pt-20">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40 md:hidden animate-fadeIn" 
+          onClick={closeMenu}
+        />
+      )}
+
+      {/* Mobile Navigation Menu - Higher z-index than overlay */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed top-0 left-0 right-0 z-50 pt-20 mobile-menu-container">
           <div className="bg-white rounded-lg mx-4 shadow-2xl border border-gray-200 animate-slideDown">
             <div className="px-4 py-6 space-y-1">
               <Link 
@@ -335,11 +346,7 @@ const Navbar: React.FC = () => {
               
               <div>
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleExplore();
-                  }}
+                  onClick={toggleExplore}
                   className={`flex items-center justify-between w-full px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 text-left ${
                     isExploreActive() 
                       ? 'text-black bg-gray-100 border-l-4 border-background' 
@@ -442,14 +449,6 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
-      )}
-
-      {/* Dark overlay for mobile menu */}
-      {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-30 md:hidden animate-fadeIn" 
-          onClick={closeMenu}
-        />
       )}
 
       {/* Overlay for explore dropdown */}
